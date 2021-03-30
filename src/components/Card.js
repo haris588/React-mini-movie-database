@@ -8,7 +8,7 @@ export default function Card() {
 
     const getApiData = async () => {
         const API_KEY = '84babbf6'
-        const API_URL = `http://www.omdbapi.com/?t=${searchInput}&apikey=${API_KEY}`
+        const API_URL = `https://www.omdbapi.com/?t=${searchInput}&apikey=${API_KEY}`
         const promise = await fetch(API_URL)
         const apiData = await promise.json()
         console.log(apiData)
