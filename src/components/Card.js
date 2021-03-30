@@ -11,7 +11,6 @@ export default function Card() {
         const API_URL = `https://www.omdbapi.com/?t=${searchInput}&apikey=${API_KEY}`
         const promise = await fetch(API_URL)
         const apiData = await promise.json()
-        console.log(apiData)
         setMovie(apiData)
         setLoading(false)
     }
