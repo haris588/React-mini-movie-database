@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import notFoundImg from '../not-found.png'
 
+
 export default function Card() {
     let [movie, setMovie] = useState([])
     let [searchInput, setSearchInput] = useState("")
@@ -34,7 +35,8 @@ export default function Card() {
 
 
     return (
-        <div class="main-container">
+        <div className="main-container">
+
             <div className="searchBar-container">
                 <h1 className="title">MINI Movie db</h1>
                 <p className="subtitle">Search for a movie!</p>
@@ -54,14 +56,14 @@ export default function Card() {
                         </ul>
                     </div>
                     <div className="more-info">
-                        <p class="text-item">{movie.Plot}</p>
-                        <p class="text-item"><span className="info-type">Director:</span> {movie.Director}</p>
-                        <p class="text-item"><span className="info-type">Writer:</span> {movie.Writer}</p>
-                        <p class="text-item"><span className="info-type">Actors:</span> {movie.Actors} ...</p>
-                        <p class="text-item"><span className="info-type">Awards:</span> {movie.Awards}</p>
-                        {loading ? <p class="text-item">Loading...</p> : movie.Ratings.map(el => <p class="text-item"><span className="info-type">{el.Source}:</span> <span class="score">{el.Value}</span></p>)}
-                        <p class="text-item"><span className="info-type">IMdb Rating:</span> <span class="score">{movie.imdbRating}</span></p>
-                        <p class="text-item"><span className="info-type">IMdb Votes:</span> <span class="score">{movie.imdbVotes}</span></p>
+                        <p className="text-item">{movie.Plot}</p>
+                        <p className="text-item"><span className="info-type">Director:</span> {movie.Director}</p>
+                        <p className="text-item"><span className="info-type">Writer:</span> {movie.Writer}</p>
+                        <p className="text-item"><span className="info-type">Actors:</span> {movie.Actors} ...</p>
+                        <p className="text-item"><span className="info-type">Awards:</span> {movie.Awards}</p>
+                        {loading ? <p class="text-item">Loading...</p> : movie.Ratings.map(el => <p className="text-item"><span className="info-type">{el.Source}:</span> <span className="score">{el.Value}</span></p>)}
+                        <p className="text-item"><span className="info-type">IMdb Rating:</span> <span className="score">{movie.imdbRating}</span></p>
+                        <p className="text-item"><span className="info-type">IMdb Votes:</span> <span className="score">{movie.imdbVotes}</span></p>
                     </div>
                 </div>
             </div>}
